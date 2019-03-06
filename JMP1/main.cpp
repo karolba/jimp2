@@ -30,7 +30,7 @@ enum TYP {
     TYP_EXPONENTIAL
 };
 
-const char *name[] = {
+static const char *name[] = {
     "",
     "Numeric",
     "Identifier",
@@ -79,7 +79,6 @@ int main()
 {
     vector<Token> tokens;
 
-    cout << "Hello World!" << endl;
     string input, binput;
     while(getline(cin, binput))
     {
