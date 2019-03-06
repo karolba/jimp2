@@ -51,6 +51,7 @@ int main()
     {
          input += binput + "\n";
     }
+
     cout << endl << input << endl;
     regex token(WHOLE);
     smatch sm;
