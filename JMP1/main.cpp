@@ -9,7 +9,7 @@ using namespace std;
 #define EXPON   "(?:[Ee][+-]?" D "+)"
 #define NUMBER  "((?:" D "+\\.?" D "*" EXPON "?)|(?:\\." D "+" EXPON "?))"
 
-#define WHOLE "(?:" NUMBER "|" IDENT "|" NL "|(,)|(;)|([(])|([)])|(=)|(+)|(-)|(*)|(/)|(^))"
+#define WHOLE "(?:" NUMBER "|" IDENT "|" NL "|(,)|(;)|([(])|([)])|(=)|(+)|(-)|(*)|(/)|( ))"
 
 enum TYP {
     TYP_NUMERIC,
@@ -57,18 +57,11 @@ int main()
     smatch sm;
 
     if(regex_search(input.cbegin(), input.cend(), sm, token)) {
-        for(int i = 1; i < 10; i++) {
+        for(size_t i = 1; i < sm.size(); i++) {
             if(sm.position(i) == 0) {
-                cout << sm[i] << '\n';
+                cout << name[i] << ": " << sm[i] << '\n';
             }
         }
-        cout << sm.position(2) << '\n';
-        cout << sm.position(3) << '\n';
-        cout << sm.position(4) << '\n';
-        cout << sm.position(5) << '\n';
-        cout << sm.position(6) << '\n';
-        cout << sm.position(7) << '\n';
-        cout << sm.position(8) << '\n';
     }
     return 0;
 }
