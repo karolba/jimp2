@@ -17,6 +17,7 @@ int main()
     {
          input += binput;
     }
+
     cout << endl << input << endl;
     return 0;
 }
