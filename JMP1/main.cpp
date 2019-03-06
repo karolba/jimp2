@@ -7,7 +7,7 @@ using namespace std;
 #define NL      "((\n)|(\r)|(\r\n))"
 #define IDENT   "([a-zA-Z][a-zA-Z0-9]*)"
 #define EXPON   "([Ee][+-]?{D}+)"
-#define NUMBER  "(({D}+\.?{D}*{EXPON}?)|(\.{D}+{EXPON}?))"
+#define NUMBER  "((" D "+\.?" D "*" EXPON "?)|(\." D "+" EXPON "?))"
 
 int main()
 {
