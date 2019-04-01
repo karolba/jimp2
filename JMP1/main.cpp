@@ -14,7 +14,6 @@ using namespace std;
 
 enum TYP {
     TYP_NULL,
-
     TYP_NUMERIC,
     TYP_IDENTIFIER,
     TYP_ENDLINE,
@@ -48,11 +47,14 @@ static const char *name[] = {
 };
 
 class Token {
+    
 private:
+    
    TYP type;
    string content;
+   
 public:
-
+   
    Token(TYP typ, const string &s) {
        this->type = typ;
        content = s;
