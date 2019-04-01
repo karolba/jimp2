@@ -16,6 +16,7 @@ int main()
             m[num] = 0;
         }
         m[num]++;
+        
         if (max < m[num])
         {
             max = m[num];
